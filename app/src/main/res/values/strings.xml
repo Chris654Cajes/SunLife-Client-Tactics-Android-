@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SunLife Client Tactics</string>
+    <string name="title_select_category">Select Category</string>
+    <string name="title_select_reason">Select Reason</string>
+    <string name="title_suggestions">Suggestions</string>
+    <string name="hint_category">Select a category</string>
+    <string name="hint_reason">Select a reason</string>
+    <string name="action_get_suggestions">Get Suggestions</string>
+    <string name="action_clear">Clear</string>
+    <string name="msg_select_category_first">Please select a category first</string>
+    <string name="msg_select_reason_first">Please select a reason</string>
+</resources>

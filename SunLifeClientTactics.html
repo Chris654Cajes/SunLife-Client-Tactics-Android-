@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunLife Client Tactics - User Manual</title>
+    <style>
+        :root {
+            --primary: #FCBA03;
+            --primary-dark: #C99B00;
+            --primary-light: #FFE066;
+            --background: #FFFFFF;
+            --surface: #F5F5F5;
+            --text-primary: #212121;
+            --text-secondary: #757575;
+            --text-on-primary: #FFFFFF;
+            --card-radius: 16px;
+            --card-elevation: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--text-on-primary);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 var(--card-radius) var(--card-radius);
+            box-shadow: 0 var(--card-elevation) 12px rgba(0,0,0,0.1);
+        }
+
+        .app-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .app-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .content-section {
+            margin: 40px 0;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 30px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: var(--card-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 var(--card-elevation) var(--card-elevation) rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border-radius: var(--card-radius);
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 var(--card-elevation) var(--card-elevation) rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--text-on-primary);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .screenshot-container {
+            background: var(--surface);
+            border-radius: var(--card-radius);
+            padding: 20px;
+            margin: 24px 0;
+            box-shadow: 0 var(--card-elevation) var(--card-elevation) rgba(0,0,0,0.08);
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin: 0 auto;
+            display: block;
+            background: var(--background);
+            border: 1px solid #e0e0e0;
+        }
+
+        .screenshot-caption {
+            text-align: center;
+            margin-top: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 24px;
+            min-height: 50px;
+        }
+
+        .step-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--text-on-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .step-content {
+            background: var(--surface);
+            padding: 16px;
+            border-radius: var(--card-radius);
+            border-left: 4px solid var(--primary);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .category-item {
+            background: var(--surface);
+            padding: 16px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.2s ease;
+        }
+
+        .category-item:hover {
+            transform: translateX(4px);
+        }
+
+        .category-title {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .category-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--surface) 100%);
+            border-radius: var(--card-radius);
+            padding: 32px;
+            margin: 32px 0;
+        }
+
+        .tip-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .tip-icon {
+            color: var(--primary);
+            margin-right: 12px;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .tip-text {
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        footer {
+            background: var(--primary-dark);
+            color: var(--text-on-primary);
+            text-align: center;
+            padding: 24px;
+            margin-top: 40px;
+            border-radius: var(--card-radius) var(--card-radius) 0 0;
+        }
+
+        .contact-info {
+            margin-top: 16px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 12px;
+            }
+
+            .app-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .step-item {
+                padding-left: 50px;
+            }
+
+            .step-item::before {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .app-title {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            .feature-card {
+                padding: 16px;
+            }
+
+            .tips-section {
+                padding: 20px;
+            }
+        }
+
+        .phone-mockup {
+            width: 320px;
+            height: 640px;
+            background: #1a1a1a;
+            border-radius: 32px;
+            padding: 12px;
+            margin: 0 auto;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: var(--background);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mockup-header {
+            background: var(--primary);
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-on-primary);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .mockup-content {
+            padding: 16px;
+            height: calc(100% - 56px);
+            overflow-y: auto;
+        }
+
+        .mockup-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .mockup-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .mockup-input {
+            background: var(--background);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .mockup-button {
+            background: var(--primary);
+            color: var(--text-on-primary);
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="app-title">SunLife Client Tactics</h1>
+            <p class="app-subtitle">Rejection Analysis & Recovery Strategies</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="content-section">
+            <h2 class="section-title">Welcome to Your Client Tactics Companion</h2>
+            <div class="card">
+                <p>SunLife Client Tactics is your professional tool for analyzing client rejections and discovering effective recovery strategies. This comprehensive app helps insurance advisors understand objections, identify root causes, and implement tactical approaches to convert potential losses into successful outcomes.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">1</div>
+                    <h3 class="feature-title">Smart Categorization</h3>
+                    <p class="feature-description">15 comprehensive rejection categories covering every client objection scenario</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">2</div>
+                    <h3 class="feature-title">Detailed Analysis</h3>
+                    <p class="feature-description">Specific reasons for each category with actionable insights</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">3</div>
+                    <h3 class="feature-title">Tactical Suggestions</h3>
+                    <p class="feature-description">Proven recovery strategies tailored to each rejection scenario</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">4</div>
+                    <h3 class="feature-title">User-Friendly Interface</h3>
+                    <p class="feature-description">Intuitive design with Material 3 aesthetics for seamless navigation</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Getting Started</h2>
+            <div class="screenshot-container">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="mockup-header">SunLife Client Tactics</div>
+                        <div class="mockup-content">
+                            <div class="mockup-card">
+                                <div class="mockup-title">Rejection Analysis Tool</div>
+                                <p style="font-size: 12px; color: var(--text-secondary); margin-bottom: 16px;">Select the category and reason for the client's rejection to get tactical suggestions for recovery.</p>
+                            </div>
+                            <div class="mockup-card">
+                                <div class="mockup-title">Select Category</div>
+                                <div class="mockup-input">Select a category</div>
+                                <div class="mockup-title" style="margin-top: 16px;">Select Reason</div>
+                                <div class="mockup-input">Select a reason</div>
+                                <button class="mockup-button">Suggestions</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="screenshot-caption">Main Interface - Clean and intuitive design for quick analysis</p>
+            </div>
+
+            <div class="card">
+                <ol class="step-list">
+                    <li class="step-item">
+                        <div class="step-content">
+                            <strong>Launch the App</strong> - Open SunLife Client Tactics from your device. The app features a clean, professional interface with the SunLife branding.
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-content">
+                            <strong>Select Rejection Category</strong> - Choose from 15 comprehensive categories that best describe your client's objection. Categories range from "Lack of Trust" to "Price Concerns" to "External Influences."
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-content">
+                            <strong>Identify Specific Reason</strong> - Once you select a category, choose the specific reason that matches your client's situation. Each category contains 3-5 detailed reasons.
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-content">
+                            <strong>Get Tactical Suggestions</strong> - Tap the "Suggestions" button to receive 4-6 proven recovery strategies specifically designed for that rejection scenario.
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-content">
+                            <strong>Apply the Strategies</strong> - Review the suggestions and implement the most appropriate tactics in your client interactions.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Rejection Categories</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <div class="category-title">Lack of Trust or Credibility</div>
+                    <div class="category-description">Client doesn't trust advisor or has past negative experiences</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Price / Affordability Concerns</div>
+                    <div class="category-description">Premiums seem too expensive or value perception is low</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Lack of Perceived Need</div>
+                    <div class="category-description">Client feels too young, healthy, or already covered</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Poor Timing</div>
+                    <div class="category-description">Financial constraints or competing priorities</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Information Overload</div>
+                    <div class="category-description">Too many options or complex terms cause confusion</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Lack of Urgency</div>
+                    <div class="category-description">No immediate trigger or perceived consequences</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Emotional Resistance</div>
+                    <div class="category-description">Discomfort discussing mortality or commitments</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Comparison Shopping</div>
+                    <div class="category-description">Client evaluating multiple advisors or offers</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Product Mismatch</div>
+                    <div class="category-description">Plan doesn't fit client needs or budget</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">External Influence</div>
+                    <div class="category-description">Family, friends, or other advisors involved</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Negative Industry Perception</div>
+                    <div class="category-description">General distrust of insurance products</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Advisor Approach Issues</div>
+                    <div class="category-description">Sales tactics or communication problems</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Commitment Hesitation</div>
+                    <div class="category-description">Fear of long-term payments or decisions</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Already Covered</div>
+                    <div class="category-description">Existing policies perceived as sufficient</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-title">Hidden Objections</div>
+                    <div class="category-description">Vague responses masking real concerns</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Example Scenarios</h2>
+            <div class="card">
+                <h3 style="color: var(--primary-dark); margin-bottom: 16px;">Scenario 1: Price Concern</h3>
+                <p><strong>Client says:</strong> "The premium is too expensive for me right now."</p>
+                <p><strong>Category:</strong> Price / Affordability Concerns</p>
+                <p><strong>Reason:</strong> Premium is too expensive</p>
+                <p><strong>Suggested Tactics:</strong></p>
+                <ul style="margin-left: 20px; color: var(--text-secondary);">
+                    <li>Offer flexible payment options (quarterly, semi-annual)</li>
+                    <li>Present lower coverage alternatives</li>
+                    <li>Break down cost into daily equivalents ($3/day vs $90/month)</li>
+                    <li>Provide budgeting guidance and financial planning</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 style="color: var(--primary-dark); margin-bottom: 16px;">Scenario 2: Trust Issues</h3>
+                <p><strong>Client says:</strong> "I need to think about it" (but seems hesitant)</p>
+                <p><strong>Category:</strong> Hidden Objections</p>
+                <p><strong>Reason:</strong> Client says they will think about it</p>
+                <p><strong>Suggested Tactics:</strong></p>
+                <ul style="margin-left: 20px; color: var(--text-secondary);">
+                    <li>Ask specifically what they want to think about</li>
+                    <li>Clarify their concerns directly</li>
+                    <li>Set a concrete follow-up schedule</li>
+                    <li>Build more rapport before closing</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Professional Tips</h2>
+            <div class="tips-section">
+                <div class="tip-item">
+                    <span class="tip-icon">!</span>
+                    <span class="tip-text">Always listen more than you talk. Understanding the real objection is key to effective recovery.</span>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">!</span>
+                    <span class="tip-text">Use the app before client meetings to prepare for common objections in your target market.</span>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">!</span>
+                    <span class="tip-text">Combine multiple suggestions from the app for complex objections requiring multi-faceted approaches.</span>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">!</span>
+                    <span class="tip-text">Document which strategies work best for different client profiles to build your personal playbook.</span>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">!</span>
+                    <span class="tip-text">Practice the suggested language and approaches to sound natural and authentic.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Technical Information</h2>
+            <div class="card">
+                <h3 style="color: var(--primary-dark); margin-bottom: 16px;">System Requirements</h3>
+                <ul style="color: var(--text-secondary); margin-left: 20px;">
+                    <li>Android 7.0 (API level 24) or higher</li>
+                    <li>Minimum 50MB storage space</li>
+                    <li>Internet connection for initial setup</li>
+                    <li>Screen resolution: 720p or higher recommended</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 style="color: var(--primary-dark); margin-bottom: 16px;">App Features</h3>
+                <ul style="color: var(--text-secondary); margin-left: 20px;">
+                    <li>15 rejection categories with 60+ specific reasons</li>
+                    <li>240+ tactical recovery suggestions</li>
+                    <li>Material 3 design for modern user experience</li>
+                    <li>Offline functionality after initial setup</li>
+                    <li>Responsive interface for all device sizes</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Support & Feedback</h2>
+            <div class="card">
+                <p>We're committed to your success as a SunLife advisor. If you have questions, suggestions, or need additional support:</p>
+                <ul style="margin: 16px 0; margin-left: 20px; color: var(--text-secondary);">
+                    <li>Contact your field support manager</li>
+                    <li>Access the SunLife advisor portal for additional resources</li>
+                    <li>Join advisor communities to share success stories</li>
+                    <li>Attend regular training sessions on objection handling</li>
+                </ul>
+                <p style="margin-top: 16px;">Your feedback helps us improve the app and develop new features to support your business growth.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3 style="margin-bottom: 8px;">SunLife Client Tactics</h3>
+            <p>Empowering advisors to turn objections into opportunities</p>
+            <div class="contact-info">
+                <p>© 2024 Sun Life Financial. All rights reserved.</p>
+                <p>Version 1.0 | Built for SunLife Advisors</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

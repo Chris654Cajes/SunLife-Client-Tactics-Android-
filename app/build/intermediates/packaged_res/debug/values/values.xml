@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFF</color>
+    <color name="navigation_bar_color">#FCBA03</color>
+    <color name="primary">#FCBA03</color>
+    <color name="primary_dark">#C99B00</color>
+    <color name="primary_light">#FFE066</color>
+    <color name="status_bar_color">#FCBA03</color>
+    <color name="surface">#F5F5F5</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <string name="action_clear">Clear</string>
+    <string name="action_get_suggestions">Get Suggestions</string>
+    <string name="app_name">SunLife Client Tactics</string>
+    <string name="hint_category">Select a category</string>
+    <string name="hint_reason">Select a reason</string>
+    <string name="msg_select_category_first">Please select a category first</string>
+    <string name="msg_select_reason_first">Please select a reason</string>
+    <string name="title_select_category">Select Category</string>
+    <string name="title_select_reason">Select Reason</string>
+    <string name="title_suggestions">Suggestions</string>
+    <style name="Theme.SunLifeClientTactics" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorSecondaryVariant">@color/primary_dark</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+        <item name="android:navigationBarColor">@color/navigation_bar_color</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

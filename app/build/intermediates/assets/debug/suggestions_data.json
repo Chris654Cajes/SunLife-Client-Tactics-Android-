@@ -1,0 +1,529 @@
+{
+  "rejection_reasons": [
+    {
+      "category": "Lack of Trust or Credibility",
+      "items": [
+        {
+          "reason": "Client does not trust the advisor yet",
+          "suggestions": [
+            "Build rapport first before presenting any product",
+            "Share client testimonials or case studies",
+            "Focus on understanding client needs instead of selling"
+          ]
+        },
+        {
+          "reason": "Advisor appears too sales-oriented",
+          "suggestions": [
+            "Shift to a consultative approach",
+            "Ask more questions than you talk",
+            "Avoid pushing for immediate decisions"
+          ]
+        },
+        {
+          "reason": "Past negative experience with insurance or agents",
+          "suggestions": [
+            "Acknowledge their past experience with empathy",
+            "Clarify differences in your approach or company",
+            "Provide transparency in policy details"
+          ]
+        },
+        {
+          "reason": "Skepticism about claims payout reliability",
+          "suggestions": [
+            "Explain the claims process clearly",
+            "Provide real claim success stories",
+            "Show statistics or proof of claim payouts"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Price / Affordability Concerns",
+      "items": [
+        {
+          "reason": "Premium is too expensive",
+          "suggestions": [
+            "Offer flexible payment options",
+            "Present lower coverage alternatives",
+            "Break down cost into daily or monthly equivalents"
+          ]
+        },
+        {
+          "reason": "Perceived low value for the cost",
+          "suggestions": [
+            "Highlight key benefits relevant to the client",
+            "Use real-life scenarios to demonstrate value",
+            "Compare cost vs potential financial risk"
+          ]
+        },
+        {
+          "reason": "Other financial priorities take precedence",
+          "suggestions": [
+            "Position insurance as financial protection, not expense",
+            "Help prioritize based on risk exposure",
+            "Suggest starting with a basic plan"
+          ]
+        },
+        {
+          "reason": "Fear of long-term financial commitment",
+          "suggestions": [
+            "Explain flexible plans or shorter terms",
+            "Clarify policy options for adjustment",
+            "Reassure with exit or modification options"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Lack of Perceived Need",
+      "items": [
+        {
+          "reason": "Client feels too young or healthy",
+          "suggestions": [
+            "Explain benefits of locking in lower premiums early",
+            "Share examples of unexpected events",
+            "Position insurance as proactive planning"
+          ]
+        },
+        {
+          "reason": "Belief that existing coverage is sufficient",
+          "suggestions": [
+            "Conduct a coverage gap analysis",
+            "Compare current benefits vs actual needs",
+            "Highlight limitations of existing coverage"
+          ]
+        },
+        {
+          "reason": "Optimism bias (nothing bad will happen)",
+          "suggestions": [
+            "Use real-life risk scenarios",
+            "Ask reflective questions about worst-case situations",
+            "Frame insurance as protection for loved ones"
+          ]
+        },
+        {
+          "reason": "No dependents or responsibilities",
+          "suggestions": [
+            "Position insurance as future planning",
+            "Highlight personal financial protection benefits",
+            "Discuss health-related coverage advantages"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Poor Timing",
+      "items": [
+        {
+          "reason": "Currently not financially ready",
+          "suggestions": [
+            "Offer smaller starter plans",
+            "Schedule a follow-up at a better time",
+            "Provide budgeting guidance"
+          ]
+        },
+        {
+          "reason": "Recent major expenses",
+          "suggestions": [
+            "Acknowledge their situation",
+            "Suggest revisiting after recovery period",
+            "Offer minimal coverage options temporarily"
+          ]
+        },
+        {
+          "reason": "Overwhelmed with other decisions",
+          "suggestions": [
+            "Simplify your presentation",
+            "Focus only on key benefits",
+            "Offer to revisit later"
+          ]
+        },
+        {
+          "reason": "Prefers to delay decision",
+          "suggestions": [
+            "Create urgency with time-based benefits",
+            "Explain risks of delaying",
+            "Set a specific follow-up schedule"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Information Overload / Confusion",
+      "items": [
+        {
+          "reason": "Too many options presented",
+          "suggestions": [
+            "Limit choices to 2-3 options",
+            "Recommend a best-fit plan",
+            "Guide decision-making clearly"
+          ]
+        },
+        {
+          "reason": "Complex terms not understood",
+          "suggestions": [
+            "Use simple and relatable language",
+            "Avoid jargon",
+            "Use analogies or visual explanations"
+          ]
+        },
+        {
+          "reason": "Unclear explanation of benefits",
+          "suggestions": [
+            "Break down benefits into simple points",
+            "Use real-life examples",
+            "Confirm understanding through questions"
+          ]
+        },
+        {
+          "reason": "Client does not fully understand the product",
+          "suggestions": [
+            "Ask them to explain back their understanding",
+            "Clarify misunderstandings immediately",
+            "Provide summary or visual aids"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Lack of Urgency",
+      "items": [
+        {
+          "reason": "No immediate need or trigger",
+          "suggestions": [
+            "Create awareness of risks",
+            "Share real-life unexpected scenarios",
+            "Relate to their personal situation"
+          ]
+        },
+        {
+          "reason": "No perceived consequences of delay",
+          "suggestions": [
+            "Explain increasing premiums with age",
+            "Highlight health eligibility risks",
+            "Use time-sensitive examples"
+          ]
+        },
+        {
+          "reason": "Insurance seen as a future concern",
+          "suggestions": [
+            "Position insurance as present protection",
+            "Link to current responsibilities",
+            "Discuss immediate benefits"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Emotional Resistance",
+      "items": [
+        {
+          "reason": "Discomfort discussing death or illness",
+          "suggestions": [
+            "Approach topic gently",
+            "Focus on protection and security",
+            "Use positive framing"
+          ]
+        },
+        {
+          "reason": "Avoidance mindset",
+          "suggestions": [
+            "Ask engaging and reflective questions",
+            "Break discussion into smaller steps",
+            "Keep conversation light but meaningful"
+          ]
+        },
+        {
+          "reason": "Fear of long-term commitments",
+          "suggestions": [
+            "Explain flexible options",
+            "Highlight ability to adjust plans",
+            "Start with smaller commitments"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Comparison / Shopping Around",
+      "items": [
+        {
+          "reason": "Client is evaluating multiple advisors",
+          "suggestions": [
+            "Differentiate your approach",
+            "Highlight your unique value",
+            "Build stronger personal connection"
+          ]
+        },
+        {
+          "reason": "Competing offers seem more attractive",
+          "suggestions": [
+            "Ask what they liked about other offers",
+            "Clarify differences objectively",
+            "Focus on long-term value instead of price"
+          ]
+        },
+        {
+          "reason": "Waiting to compare before deciding",
+          "suggestions": [
+            "Set a follow-up timeline",
+            "Provide comparison summaries",
+            "Position yourself as a guide, not a seller"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Product Mismatch",
+      "items": [
+        {
+          "reason": "Plan does not fit client needs",
+          "suggestions": [
+            "Reassess client needs",
+            "Customize the plan",
+            "Ask deeper discovery questions"
+          ]
+        },
+        {
+          "reason": "Coverage amount is inappropriate",
+          "suggestions": [
+            "Adjust based on financial goals",
+            "Provide multiple coverage scenarios",
+            "Use needs-based calculation"
+          ]
+        },
+        {
+          "reason": "Payment terms are not suitable",
+          "suggestions": [
+            "Offer flexible payment schedules",
+            "Align with client cash flow",
+            "Provide alternative structures"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "External Influence",
+      "items": [
+        {
+          "reason": "Family or partner disagrees",
+          "suggestions": [
+            "Invite them into the discussion",
+            "Address their concerns directly",
+            "Provide family-focused benefits"
+          ]
+        },
+        {
+          "reason": "Influenced by friends or relatives",
+          "suggestions": [
+            "Ask what they were told",
+            "Clarify misinformation",
+            "Provide factual comparisons"
+          ]
+        },
+        {
+          "reason": "Another trusted advisor is involved",
+          "suggestions": [
+            "Respect existing relationships",
+            "Position as a second opinion",
+            "Offer complementary insights"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Negative Industry Perception",
+      "items": [
+        {
+          "reason": "Belief that insurance is a scam",
+          "suggestions": [
+            "Provide transparency",
+            "Show regulation and company credibility",
+            "Share real customer experiences"
+          ]
+        },
+        {
+          "reason": "Stories of denied claims",
+          "suggestions": [
+            "Explain reasons claims get denied",
+            "Educate on proper policy usage",
+            "Provide successful claim examples"
+          ]
+        },
+        {
+          "reason": "General distrust of financial products",
+          "suggestions": [
+            "Simplify explanations",
+            "Avoid technical jargon",
+            "Build trust gradually over time"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Advisor Approach Issues",
+      "items": [
+        {
+          "reason": "Advisor talks too much and does not listen",
+          "suggestions": [
+            "Practice active listening",
+            "Use more open-ended questions",
+            "Let the client speak more"
+          ]
+        },
+        {
+          "reason": "Pushy sales approach",
+          "suggestions": [
+            "Slow down the process",
+            "Focus on helping, not selling",
+            "Give space for decision-making"
+          ]
+        },
+        {
+          "reason": "Lack of personalization",
+          "suggestions": [
+            "Tailor recommendations",
+            "Reference client-specific details",
+            "Customize presentation"
+          ]
+        },
+        {
+          "reason": "Weak follow-up or closing",
+          "suggestions": [
+            "Set clear next steps",
+            "Follow up consistently",
+            "Use soft closing techniques"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Commitment Hesitation",
+      "items": [
+        {
+          "reason": "Fear of long-term payments",
+          "suggestions": [
+            "Break payments into smaller terms",
+            "Show flexibility options",
+            "Highlight affordability strategies"
+          ]
+        },
+        {
+          "reason": "Fear of making the wrong decision",
+          "suggestions": [
+            "Reassure with clear explanations",
+            "Provide comparisons",
+            "Offer time to review"
+          ]
+        },
+        {
+          "reason": "Preference to delay commitment",
+          "suggestions": [
+            "Set deadlines or follow-ups",
+            "Highlight risks of delaying",
+            "Encourage small first steps"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Already Covered",
+      "items": [
+        {
+          "reason": "Existing policies are considered sufficient",
+          "suggestions": [
+            "Review existing coverage",
+            "Identify protection gaps",
+            "Provide comparison analysis"
+          ]
+        },
+        {
+          "reason": "Company benefits or HMO coverage perceived as enough",
+          "suggestions": [
+            "Explain limitations of employer coverage",
+            "Highlight portability issues",
+            "Show long-term risks"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Hidden Objections",
+      "items": [
+        {
+          "reason": "Client says they will think about it",
+          "suggestions": [
+            "Ask what specifically they want to think about",
+            "Clarify concerns",
+            "Set a follow-up schedule"
+          ]
+        },
+        {
+          "reason": "Client claims to be too busy",
+          "suggestions": [
+            "Offer a shorter discussion",
+            "Schedule a better time",
+            "Send a quick summary"
+          ]
+        },
+        {
+          "reason": "Client postpones to a later time",
+          "suggestions": [
+            "Agree on a specific date",
+            "Send reminders",
+            "Re-engage with value-driven content"
+          ]
+        },
+        {
+          "reason": "Underlying lack of trust",
+          "suggestions": [
+            "Build rapport",
+            "Provide proof and credibility",
+            "Be consistent in follow-ups"
+          ]
+        },
+        {
+          "reason": "Unclear perceived value",
+          "suggestions": [
+            "Reframe benefits",
+            "Use real-life examples",
+            "Align with personal goals"
+          ]
+        },
+        {
+          "reason": "Not fully convinced",
+          "suggestions": [
+            "Ask what is missing",
+            "Address remaining doubts",
+            "Provide reassurance"
+          ]
+        }
+      ]
+    }
+  ],
+  "core_root_causes": [
+    {
+      "cause": "Lack of trust",
+      "suggestions": [
+        "Build relationship before selling",
+        "Use social proof",
+        "Be transparent and consistent"
+      ]
+    },
+    {
+      "cause": "Lack of urgency",
+      "suggestions": [
+        "Highlight risks of delay",
+        "Use time-based examples",
+        "Relate to personal situation"
+      ]
+    },
+    {
+      "cause": "Lack of perceived value",
+      "suggestions": [
+        "Connect product to real-life impact",
+        "Customize benefits presentation",
+        "Simplify explanations"
+      ]
+    }
+  ]
+}

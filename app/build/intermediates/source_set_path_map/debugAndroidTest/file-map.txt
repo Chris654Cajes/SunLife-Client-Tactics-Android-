@@ -1,0 +1,4 @@
+com.sunlife.clienttactics.test.app-androidTest-0 D:\Android Studio Projects\SunLifeClientTactics\app\build\generated\res\resValues\androidTest\debug
+com.sunlife.clienttactics.test.app-mergeDebugAndroidTestResources-1 D:\Android Studio Projects\SunLifeClientTactics\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.sunlife.clienttactics.test.app-mergeDebugAndroidTestResources-2 D:\Android Studio Projects\SunLifeClientTactics\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.sunlife.clienttactics.test.app-merged_res-3 D:\Android Studio Projects\SunLifeClientTactics\app\build\intermediates\merged_res\debugAndroidTest

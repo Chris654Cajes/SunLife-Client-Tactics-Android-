@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-merged_res-38:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-main-40:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-merged_res-38:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-main-40:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-merged_res-38:\\layout_dialog_suggestions.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-main-40:\\layout\\dialog_suggestions.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-merged_res-38:\\layout_activity_main.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-main-40:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.sunlife.clienttactics.app-merged_res-38:/layout_activity_main.xml.flat",
+        "source": "com.sunlife.clienttactics.app-main-40:/layout/activity_main.xml"
+    },
+    {
+        "merged": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-merged_res-38:\\layout_item_suggestion.xml.flat",
+        "source": "D:\\.gradle\\daemon\\8.8\\com.sunlife.clienttactics.app-main-40:\\layout\\item_suggestion.xml"
+    }
+]
